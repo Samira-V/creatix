@@ -410,16 +410,19 @@ nav ul li a {
         animation: all move 1s;
         bottom: 200px;
     }
+
     @media (width <=380px) {
-         .btn-wrapper {
+        .btn-wrapper {
             flex-direction: column;
             gap: 20px;
-            
-             top: 0px;}
-             .right{
-                margin-left: 0;
-             }
-             
+
+            top: 0px;
+        }
+
+        .right {
+            margin-left: 0;
+        }
+
     }
 
     .header {
@@ -583,7 +586,7 @@ nav ul li a {
     .row {
         display: flex;
         align-items: center;
-        
+
 
         width: 100%;
         color: var(--white);
@@ -596,7 +599,7 @@ nav ul li a {
         text-align: left;
         width: 100% !important;
     }
- 
+
 }
 
 .row-right-txt {
@@ -662,18 +665,18 @@ nav ul li a {
     }
 
     .caption::before {
-      display: none;
+        display: none;
     }
 
     .caption::after {
-       display: none;
+        display: none;
     }
 }
 
 .caption::before {
     content: "";
     width: 15px;
-    height: 58px;
+    height: 65px;
     display: block;
     position: absolute;
     bottom: 0px;
@@ -684,7 +687,7 @@ nav ul li a {
 .caption::after {
     content: "";
     width: 5px;
-    height: 58px;
+    height: 65px;
     display: block;
     position: absolute;
     bottom: 0px;
@@ -721,7 +724,7 @@ nav ul li a {
 
 /* start services style 
  */
-.services {
+.services , .meet {
     width: 100%;
 
     display: flex;
@@ -760,13 +763,13 @@ nav ul li a {
     right: -10px;
     width: 30px;
     height: 300px;
-       background-color: var(--green);
+    background-color: var(--green);
     filter: blur(50px);
     transform: rotate(45deg);
 }
 
-.service-container {
-    width:90%;
+.service-container ,.meet-container {
+    width: 90%;
     margin-inline: 40px;
 
 
@@ -774,7 +777,7 @@ nav ul li a {
 
 .service-wrapper {
     width: 100%;
-   
+
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
     position: relative;
@@ -790,8 +793,11 @@ nav ul li a {
     }
 }
 
-.services-title {
+.services-title , .meet-title{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .services-title h4 {
@@ -799,15 +805,15 @@ nav ul li a {
 
 }
 
-.services-title .svg {
+.services-title .svg  , .meet-title .svg{
     position: absolute;
     top: -5px;
-    left: 25px;
+    left: 30px;
     width: 140px !important;
     height: 35px;
 }
 
-.services-title .rec-txt {
+.services-title .rec-txt , .meet-title .rec-txt {
     position: absolute;
     top: 0;
     left: 50px;
@@ -837,7 +843,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     flex-direction: column;
-      gap: 10px;
+    gap: 10px;
 }
 
 .service-item ul li {
@@ -851,7 +857,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-     padding: 8px 18PX;
+    padding: 8px 18PX;
     border-radius: 20px;
     width: 100%;
     box-shadow: rgba(85, 85, 88, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -916,6 +922,7 @@ nav ul li a {
     display: flex;
 
 }
+
 .service-btn-wrapper svg {
     width: 20px;
     height: 20px;
@@ -967,4 +974,162 @@ nav ul li a {
     bottom: -100px;
     left: 100px;
     background-color: var(--green);
+}
+
+/* start scrolling ticker style  */
+.scrolling-ticker {
+    width: 100%;
+    color: var(--white);
+    overflow-x: hidden;
+
+}
+
+.scroll-ticker-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+
+}
+
+.scroll-ticker-wrapper div {
+    display: flex;
+    align-items: center;
+    animation: scroll 4s linear infinite;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow: hidden;
+}
+
+.spstar {
+    width: 55px;
+    fill: var(--green);
+
+
+}
+
+.scrolling-ticker p {
+
+    display: inline-block;
+    font-size: 50px;
+    padding-inline: 30px;
+    font-weight: bold;
+    white-space: nowrap;
+    max-width: none;
+}
+
+@media (width <=786px) {
+    .scrolling-ticker p {
+        font-size: 30px;
+    }
+}
+@media (width <=600px) {
+    .scrolling-ticker p {
+        font-size: 20px;
+    }
+}
+@media (width <=500px) {
+    .scrolling-ticker p {
+        font-size: 15px;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(100%, 0);
+    }
+
+    25% {
+        transform: translate(50%, 0);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* start meet the team styles  */
+.meet-wrapper{
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 10px;
+   cursor: pointer;
+   
+  
+
+}
+@media(width <= 900px){
+    .meet-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(width <= 600px){
+    .meet-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+.meet-btn{
+background-color: var(--white);
+color: var(--background-color);    
+}
+.meet-item{
+    background-color: var(--white);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    color: var(--background-color);
+    padding: 10px;
+}
+.meet-item-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    position:relative;
+}
+.item-top-left{
+    display: flex;
+    align-items: center;
+}
+.item-top-left div{
+    display: flex;
+    flex-direction: column;
+}
+.meet-item-top img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: 30px;
+    top: 30px;
+}
+.item-top-right  svg{
+width: 40px;
+background-color: var(--background-color);
+height: 40px;
+border-radius: 50%;
+fill: var(--white);
+padding: 5px;
+}
+.meet-item-top div .flower{
+    fill: var(--green);
+  color: var(--green);
+    width: 100px;
+    height: 100px;
+}
+.meet-item-bottom{
+    padding: 10px;
+    font-size: 14px;
+    color: #5c5b5b;
 }
