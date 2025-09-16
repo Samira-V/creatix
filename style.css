@@ -575,6 +575,13 @@ nav ul li a {
 
 
 }
+@media (width <= 400px){
+    .row{
+        align-items: flex-start;
+        
+    }
+  
+}
 
 .row-left,
 .row-right {
@@ -1214,6 +1221,16 @@ nav ul li a {
 .meet-btn {
     background-color: var(--white);
     color: var(--background-color);
+}
+@media (width <=400px){
+    .meet-btn{
+        padding: 4px;
+    }
+    .meet-title .rec-txt {
+    position: absolute;
+    top:0px;
+   
+}
 }
 
 .meet-item {
