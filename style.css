@@ -814,20 +814,18 @@ nav ul li a {
 
 }
 
-.services-title .svg,
-.meet-title .svg {
+.services-title .svg{
     position: absolute;
-    top: 30px;
+    top: 35px;
     left:35px;
     width: 140px !important;
     height: 35px;
 }
 
-.services-title .rec-txt,
-.meet-title .rec-txt {
+.services-title .rec-txt{
     position: absolute;
-    top: 35px;
-    left: 55px;
+    top:30px;
+    left: 65px;
     font-weight: bold;
     font-size: 18px;
 }
@@ -1191,7 +1189,28 @@ nav ul li a {
         grid-template-columns: 1fr;
     }
 }
-
+.meet-title{
+    display: flex;
+    align-items: center;
+}
+.meet-title div , .services-title div{
+    display: flex;
+    align-items: center;
+}
+.meet-title .svg {
+    position: absolute;
+    top: 30px;
+    left:35px;
+    width: 140px !important;
+    height: 35px;
+}
+.meet-title .rec-txt {
+    position: absolute;
+    top:33px;
+    left: 55px;
+    font-weight: bold;
+    font-size: 18px;
+}
 .meet-btn {
     background-color: var(--white);
     color: var(--background-color);
