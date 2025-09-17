@@ -1104,12 +1104,12 @@ nav ul li a {
     display: flex;
     align-items: center;
     width: 90%;
-    overflow-x: hidden!important;
+    overflow: hidden!important;
    
     max-width: 1536px;
     justify-content: center;
     height: 80px;
-    overflow-x: hidden;
+ 
     mask-image: linear-gradient(to right,
             rgba(0, 0, 0, 0),
             rgba(0, 0, 0, 1) 20%,
@@ -1119,11 +1119,7 @@ nav ul li a {
 
 .item svg {
     width: 45px !important;
- 
-    fill: var(--green);
-
-
-
+     fill: var(--green);
 }
 
 .item p {
@@ -1132,37 +1128,30 @@ nav ul li a {
     font-weight: bold;
 }
 
-
-
-
 .item {
-
     height: 70px;
-   
-
-    position: absolute;
-    animation: 18s linear infinite;
-}
-
-.item {
-    left: 1600px;
-    animation-name: sLeft;
+       /* position: absolute; */
+    animation: 19s linear infinite;
+       animation-name: sLeft;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  
-
+  transform: translate(1400px);
 }
 
+
+
 @keyframes sLeft {
+   
     to {
-        left: -200px;
+        /* left: -200px; */
+        transform: translate(-200px);
     }
 }
 
 
 .item1 {
-    animation-delay: -15s;
+    animation-delay:-15s;
 }
 
 .item2 {
@@ -1178,11 +1167,11 @@ nav ul li a {
 }
 
 .item5 {
-    animation-delay: -3s;
+    animation-delay:-3s;
 }
 
 .item6 {
-    animation-delay: 0;
+    animation-delay:-0s;
 }
 
 /* start meet the team styles  */
