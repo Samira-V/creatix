@@ -1,16 +1,18 @@
 let menu = document.querySelector(".mobile-menu-container")
 let header = document.querySelector(".header")
+let burger = document.querySelector(".burger")
+let openMenu = document.querySelector(".openMenu")
 const cursor = document.querySelector(".cursor")
-let menuItem = document.querySelectorAll(".menu-item")
+const menuItem = document.querySelectorAll(".menu-item")
 
-menu.addEventListener('click', () => {
+burger.addEventListener('click', () => {
   header.classList.toggle('openMenu')
 })
 
 menu.addEventListener("mousemove", (e) => {
   console.log(e)
   cursor.style.left = `${e.clientX}px`
-  cursor.style.top = `${e.clientY}px`
+    cursor.style.top = `${e.clientY}px`
 })
 
 for (item of menuItem) {
