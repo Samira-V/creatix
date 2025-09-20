@@ -27,3 +27,13 @@ for (item of menuItem) {
     cursor.style.transform = "translate(-50% , -50%) scale(0)"
   })
 }
+window.addEventListener('load',()=>{
+  const title = document.querySelector(".title")
+  const image = document.querySelector('.image')
+  const className = title.getAttribute('data-index')
+  const imgClassName = image.getAttribute('data-index')
+  title.classList.add(className)
+  image.classList.add(imgClassName)
+})
+
+ 
